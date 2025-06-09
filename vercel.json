@@ -4,5 +4,6 @@
     { "src": "/api/(.*)", "dest": "/api/$1.js" },
     { "src": "/asset/(.*)", "dest": "/asset/$1" },
     { "src": "/(.*)", "dest": "/index.html" }
+    
   ]
 }
