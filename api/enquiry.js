@@ -51,7 +51,8 @@ export default async function handler(req, res) {
 
     return res.status(200).json({ message: 'Enquiry submitted successfully' });
   } catch (error) {
-    console.error('Email sending failed:', error);
-    return res.status(500).json({ message: 'Failed to send email' });
-  }
+  console.error('Error sending email:', error);  // 👈 Log the real reason
+  return res.status(500).json({ message: 'Failed to send email' });
+}
+
 }
